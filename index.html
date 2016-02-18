@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Pubnub Delays</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://cdn.pubnub.com/pubnub-3.10.0.js"></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="js/delays.js"></script>
 </head>
 <body>
-
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table" id="results">
+                <thead>
+                <tr>
+                    <td>Started</td>
+                    <td>Finished</td>
+                    <td>Diff</td>
+                </tr>
+                </thead>
+                <tbody>
+                <script type="text/template" id="delay-template">
+                <tr>
+                    <td><%= Started %></td>
+                    <td><%= Finished %></td>
+                    <td><%= Diff %> (<%= parseInt(Diff, 10) / 1000000000 %>s)</td>
+                </tr>
+                </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 </body>
 </html>
